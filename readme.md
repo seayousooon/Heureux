@@ -2,7 +2,7 @@
 
 Une première page pour fédérer des idées, projets, réalisations et procédés positifs, dans un esprit constructif.
 
-La fiche projet d'origine est conservée dans [README.md](./README.md).
+Le cadrage du projet et le MVP sont décrits dans [README.md](./README.md).
 
 ## Fichiers
 
@@ -15,7 +15,9 @@ La fiche projet d'origine est conservée dans [README.md](./README.md).
 Ouvrir `index.html` dans un navigateur. Aucun logiciel, dépendance ou compilation nécessaire.
 Le menu filtre six thèmes. Tous restent visibles lorsque JavaScript est désactivé.
 
-Cette version est une vitrine : ni comptes utilisateurs, ni publication, ni stockage de contributions.
+Le MVP cible la consultation de procédés classés par thèmes, la proposition de procédés et la connexion par e-mail ou Google.
+
+La page actuelle présente ce cadrage et filtre les thèmes. Le catalogue de procédés, les comptes utilisateurs, la publication et le stockage de contributions restent à développer.
 Ces fonctionnalités nécessitent un service d'authentification et un stockage adaptés ; GitHub Pages sert les fichiers statiques.
 
 ## Activer GitHub Pages
@@ -27,9 +29,7 @@ Ces fonctionnalités nécessitent un service d'authentification et un stockage a
 
 Adresse habituelle après activation : https://seayousooon.github.io/Heureux/
 
-Le dépôt est privé. GitHub Pages sur un dépôt privé nécessite un forfait GitHub compatible (Pro, Team ou Enterprise).
-Avec GitHub Free, un dépôt public est nécessaire. La visibilité du dépôt n'a pas été modifiée.
-Le site publié est normalement public même si son dépôt est privé.
+Le dépôt est désormais public et peut utiliser GitHub Pages avec GitHub Free.
 
 Documentation officielle : https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
