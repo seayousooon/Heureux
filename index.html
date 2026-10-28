@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Heureux : des idées et des projets positifs pour construire ensemble un monde heureux.">
+<title>Heureux — Des idées pour demain</title>
+<style>
+:root{color-scheme:light;--ink:#173d33;--green:#256449;--paper:#f7f7ef}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,sans-serif}header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:26px;font-weight:800;text-decoration:none;color:var(--ink)}nav a{color:var(--ink)}.hero{padding:65px 0 55px;max-width:830px}.tag{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px}h1{font-size:clamp(40px,7vw,78px);line-height:1.08;letter-spacing:-.045em;margin:20px 0}h2{font-size:30px;line-height:1.25}.intro{font-size:21px;max-width:650px}.button{display:inline-block;background:var(--green);color:white;padding:12px 23px;border-radius:30px;text-decoration:none;font-weight:700;margin-top:14px}section{scroll-margin-top:24px}label{display:block;font-weight:700;margin-bottom:8px}select{font:inherit;color:var(--ink);background:white;border:1px solid #9bb3a4;border-radius:10px;padding:12px;width:100%;max-width:440px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:25px 0 50px}.card{background:white;border:1px solid #d9e3d8;border-radius:18px;padding:24px}.card h3{margin:0 0 10px;font-size:21px}.card p{margin:0}.number{display:block;font-size:13px;letter-spacing:.1em;margin-bottom:22px;color:#527261}.participation{padding:30px;border-radius:20px;background:#e6eedb;margin-bottom:40px}.participation h2{margin-top:0}footer{border-top:1px solid #d9e3d8;font-size:14px}a:focus-visible,select:focus-visible{outline:3px solid #b26b16;outline-offset:5px}[hidden]{display:none!important}@media(max-width:740px){.grid{grid-template-columns:1fr}.hero{padding-top:35px}header{align-items:flex-start}nav{font-size:14px}.intro{font-size:19px}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="./">heureux<span aria-hidden="true"> ☀</span></a><nav aria-label="Navigation principale"><a href="#themes">Explorer les thèmes</a></nav></header>
+<main>
+<div class="hero"><p class="tag">Des idées · des projets · du positif</p><h1>Et si on façonnait un monde heureux ?</h1><p class="intro">Un point de départ pour réunir des idées, des projets et des réalisations positives. Choisissez un thème et imaginons ensemble la suite.</p><a class="button" href="#themes">Choisir un thème ↓</a></div>
+<section id="themes" aria-labelledby="themes-title"><h2 id="themes-title">Par quoi voulez-vous commencer ?</h2><label for="theme">Votre thème</label><select id="theme"><option value="all">Tous les thèmes</option><option value="nature">Nature et environnement</option><option value="solidarite">Entraide et solidarité</option><option value="savoirs">Savoirs et savoir-faire</option><option value="quotidien">Bien vivre au quotidien</option><option value="creation">Culture et création</option><option value="collectif">Projets collectifs</option></select>
+<p id="count" role="status" aria-live="polite">6 thèmes à explorer.</p>
+<div class="grid">
+<article class="card" data-theme="nature"><span class="number">01 / PRÉSERVER</span><h3>Nature et environnement</h3><p>Jardiner, préserver le vivant et imaginer des pratiques plus respectueuses de notre environnement.</p></article>
+<article class="card" data-theme="solidarite"><span class="number">02 / S'ENTRAIDER</span><h3>Entraide et solidarité</h3><p>Créer du lien et imaginer des actions utiles aux autres, à côté de chez soi ou plus loin.</p></article>
+<article class="card" data-theme="savoirs"><span class="number">03 / TRANSMETTRE</span><h3>Savoirs et savoir-faire</h3><p>Partager des connaissances, des procédés et des gestes qui donnent à chacun les moyens d'agir.</p></article>
+<article class="card" data-theme="quotidien"><span class="number">04 / PRENDRE SOIN</span><h3>Bien vivre au quotidien</h3><p>Explorer des idées simples pour un quotidien plus agréable et des relations plus attentives.</p></article>
+<article class="card" data-theme="creation"><span class="number">05 / IMAGINER</span><h3>Culture et création</h3><p>Faire une place aux arts, à l'expression et aux réalisations qui ouvrent de nouveaux horizons.</p></article>
+<article class="card" data-theme="collectif"><span class="number">06 / CONSTRUIRE</span><h3>Projets collectifs</h3><p>Réunir les envies et les compétences pour transformer une idée positive en projet commun.</p></article>
+</div></section>
+<section class="participation" aria-labelledby="participer"><h2 id="participer">La suite se construit ensemble</h2><p>Heureux a vocation à accueillir les contenus de ses participants, dans un esprit constructif.</p><p>Cette première version permet de découvrir les thèmes. La création de compte et la publication de contributions ne sont pas encore disponibles.</p></section>
+</main><footer>Heureux — Des initiatives positives, un esprit constructif.</footer>
+<script>
+const menu=document.getElementById('theme');
+const cards=Array.from(document.querySelectorAll('[data-theme]'));
+menu.addEventListener('change',()=>{
+let visible=0;
+cards.forEach(card=>{card.hidden=menu.value!=='all'&&card.dataset.theme!==menu.value;if(!card.hidden)visible++;});
+document.getElementById('count').textContent=visible===1?'1 thème à explorer.':visible+' thèmes à explorer.';
+});
+</script>
+</body>
+</html>
